@@ -1,4 +1,6 @@
-from django.views.generic import CreateView, ListView, TemplateView
+from django.views.generic import (
+    CreateView, ListView, TemplateView, DeleteView
+)
 from django.urls import reverse_lazy
 from django.contrib import messages
 from .models import Product
@@ -41,3 +43,13 @@ class ProductListView(ListView):
             .replace('X', ',')
         )
         return product
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    template_name = 'products/list.html'
+    success_url = reverse_lazy('products:list')
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().delete(request, *args, **kwargs)
