@@ -23,3 +23,13 @@ task run
 ```
 
 Em seguida, para visualizar abra seu navegador no endereço: http://127.0.0.1:8000/
+
+Para executar todos os testes:
+```bash
+task test
+```
+
+Para executar um teste específico:
+```bash
+task test-matching "especific test name"
+```
