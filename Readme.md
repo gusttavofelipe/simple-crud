@@ -5,6 +5,8 @@ A Aplicação foi desenvolvida utilizando o `Django`. Para salvar os dados está
 ## Execução
 Primeiro você precisa do `pyenv` e do `poetry`, para gerenciar o `python` e o ambiente virtual, respectivamente. Caso não tenha instalado, aqui está uma [documentação](https://github.com/nayannanara/poetry-documentation) para te ajudar.
 
+Crie um arquivo `.env` e insira as credenciais de `local.env`.
+
 Para subir o banco de dados, caso não tenha o [docker](https://docs.docker.com/engine/install/ubuntu/) e o [docker-compose](https://docs.docker.com/compose/install/linux/) instalado, faça a instalação e logo em seguida, execute:
 
 ```bash
