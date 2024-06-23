@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Register a new product</h1>
+    <div class="card p-5 shadow-lg" style="max-width: 600px; width: 100%; margin: 0 auto;">
+        <form method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_name" class="form-label">{{ form.name.label }}</label>
+                {% render_field form.name placeholder='Ex: Mouse' class='form-control' %}
+            </div>
+            <div class="mb-3">
+                <label for="id_value" class="form-label">{{ form.value.label }}</label>
+                {% render_field form.value placeholder='Ex: 145,00' class='form-control' %}
+            </div>
+            <div class="mb-3">
+                <label for="id_description" class="form-label">{{ form.description.label }}</label>
+                {% render_field form.description placeholder='Product description' class='form-control' %}
+            </div>
+            <div class="mb-3 form-check form-switch">
+                <label class="form-check-label">{{ form.available.label }}</label>
+                {% render_field form.available class='form-check-input' %}
+            </div>
+            <button type="submit" class="btn btn-success w-100 fw-bold">Register</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
