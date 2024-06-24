@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "oak"
+name = "Oak Application"
 version = "0.1.0"
 description = "Project made for Oak application"
 authors = ["Gustavo Felipe <gustavofeliperepositorio@gmail.com>"]
@@ -29,6 +29,7 @@ migrate = "python manage.py migrate"
 test = "pytest --cov=products -vv"
 post_test = "coverage html"
 test-matching = "pytest ./tests -vv -k"
+packages = "poetry install --no-root"
 
 [build-system]
 requires = ["poetry-core"]

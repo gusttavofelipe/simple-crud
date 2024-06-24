@@ -1,6 +1,5 @@
 from decouple import config
 
-ENGINE = config('ENGINE')
 SECRET_KEY = config('SECRET_KEY')
 
 POSTGRES_DB = config('POSTGRES_DB')
