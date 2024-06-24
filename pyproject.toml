@@ -29,7 +29,6 @@ migrate = "python manage.py migrate"
 test = "pytest --cov=products -vv"
 post_test = "coverage html"
 test-matching = "pytest ./tests -vv -k"
-packages = "poetry install --no-root"
 
 [build-system]
 requires = ["poetry-core"]

@@ -13,9 +13,9 @@ pyenv activate app
 
 Instale as dependências:
 ```bash
-task packages
+poetry install --no-root
 ```
-
+### Variável de ambiente Django
 Em seguida abra seu terminal e execute o comando `python` para ter acesso ao shell interativo.
 
 No shell, digite o seguinte comando para importar a função que irá gerar sua SECRET_KEY:
@@ -28,7 +28,9 @@ Ainda no shell interativo, execute o comando abaixo para gerar e exibir sua SECR
 print(get_random_secret_key())
 ```
 
-Copie o valor gerado e atribua a variavel `SECRET_KEY` em seu arquivo `.env`
+Copie o valor gerado e atribua a variavel `SECRET_KEY` em seu arquivo `env`
+
+### Banco de dados 
 
 Para subir o banco de dados, caso não tenha o [docker](https://docs.docker.com/engine/install/ubuntu/) e o [docker-compose](https://docs.docker.com/compose/install/linux/) instalado, faça a instalação e logo em seguida, execute:
 
@@ -36,10 +38,14 @@ Para subir o banco de dados, caso não tenha o [docker](https://docs.docker.com/
 docker-compose up -d
 ```
 
+### Migrações
+
 Para aplicar as migrações, execute:
 ```bash
 task migrate
 ```
+
+### Executar aplicação
  
 Para subir a aplição, execute:
 ```bash
