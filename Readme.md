@@ -16,7 +16,7 @@ Instale as dependências:
 poetry install --no-root
 ```
 ### Variável de ambiente Django
-Em seguida abra seu terminal e execute o comando `python` para ter acesso ao shell interativo.
+Em seguida execute o comando `python` para ter acesso ao shell interativo.
 
 No shell, digite o seguinte comando para importar a função que irá gerar sua SECRET_KEY:
 ```bash
@@ -28,7 +28,7 @@ Ainda no shell interativo, execute o comando abaixo para gerar e exibir sua SECR
 print(get_random_secret_key())
 ```
 
-Copie o valor gerado e atribua a variavel `SECRET_KEY` em seu arquivo `env`
+Copie o valor gerado e atribua a variavel `SECRET_KEY` em seu arquivo `.env`
 
 ### Banco de dados 
 
